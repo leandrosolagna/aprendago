@@ -6,7 +6,8 @@ jobs:
       - image: golangci/golangci-lint:v1.33
     steps:
       - run: echo "Running GolangCI lint"
-      - run: golangci-lint run -v
+      - run: ls -la
+        #    - run: golangci-lint run -v
 workflows:
  lint:
    jobs:
