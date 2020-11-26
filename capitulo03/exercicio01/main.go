@@ -10,6 +10,6 @@ func main() {
 	z := true
 	fmt.Println(x, y, z)
 	fmt.Println(x)
-	fmt.Println(y)
+	fmt.Println(y)asdsdas
 	fmt.Print(z)
 }
