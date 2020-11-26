@@ -2,16 +2,13 @@
 version: 2.1
 jobs:     
   lint:
-    working_directory: ~/aprendago
     docker:
       - image: golangci/golangci-lint:v1.33
     steps:
       - checkout
       - run: echo "Running GolangCI lint"
-      - run: ls -la /
-      - run: ls -la /*
-      - run: ls -la
-        #    - run: golangci-lint run -v
+      - run: ls -la 
+      - run: golangci-lint run -v
 workflows:
  lint:
    jobs:
