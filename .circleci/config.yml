@@ -5,6 +5,7 @@ jobs:
     docker:
       - image: golangci/golangci-lint:v1.33
     steps:
+      - checkout
       - run: echo "Running GolangCI lint"
       - run: golangci-lint run -v
 workflows:
