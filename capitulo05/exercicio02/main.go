@@ -7,9 +7,9 @@ import (
 var x bool
 
 func main() {
-	x = (100 == 100)
+	x = (101 == 100)
 	fmt.Println(x)
-	x = (100 != 100)
+	x = (101 != 100)
 	fmt.Println(x)
 	x = (200 <= 10)
 	fmt.Println(x)
