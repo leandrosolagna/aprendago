@@ -5,7 +5,10 @@ import (
 )
 
 func main() {
+
 	slice := make([]string, 26, 52)
+
+	fmt.Println(slice)
 
 	slice = []string{"Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Espírito Santo",
 		"Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará",
