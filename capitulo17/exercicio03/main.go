@@ -51,8 +51,12 @@ func main() {
 
 	fmt.Println(users)
 
+	fmt.Println("Com encoder")
 	encoder := json.NewEncoder(os.Stdout)
-	encoder.Encode(users)
+	err1 := encoder.Encode(users)
+	if err1 != nil {
+		fmt.Println(err1)
+	}
 
 	fmt.Println("Method chaining:")
 
