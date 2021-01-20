@@ -7,6 +7,7 @@ import (
 )
 
 var wg sync.WaitGroup
+var contador int
 var mtx sync.Mutex
 
 func main() {
@@ -18,15 +19,15 @@ func incrementacao(x int) {
 	for i := 0; i < x; i++ {
 		go func() {
 			mtx.Lock()
-			y := x
+			y := contador
 			runtime.Gosched()
 			y++
-			y = y
+			contador = y
 			mtx.Unlock()
 			wg.Done()
 		}()
 	}
 
 	wg.Wait()
-	fmt.Println(x)
+	fmt.Println(contador)
 }
