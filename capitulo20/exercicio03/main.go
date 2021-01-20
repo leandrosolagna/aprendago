@@ -7,6 +7,7 @@ import (
 )
 
 var wg sync.WaitGroup
+var contador int
 
 func main() {
 	incrementacao(60)
@@ -16,10 +17,10 @@ func incrementacao(x int) {
 	wg.Add(x)
 	for i := 0; i < x; i++ {
 		go func() {
-			y := 0
+			y := contador
 			runtime.Gosched()
 			y++
-			y = y
+			contador = y
 			wg.Done()
 		}()
 	}
