@@ -26,5 +26,5 @@ func incrementacao(x int) {
 	}
 
 	wg.Wait()
-	fmt.Println(x)
+	fmt.Println(contador)
 }
