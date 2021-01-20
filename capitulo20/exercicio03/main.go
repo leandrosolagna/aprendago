@@ -16,10 +16,10 @@ func incrementacao(x int) {
 	wg.Add(x)
 	for i := 0; i < x; i++ {
 		go func() {
-			y := x
+			y := 0
 			runtime.Gosched()
 			y++
-			x = y
+			y = y
 			wg.Done()
 		}()
 	}
